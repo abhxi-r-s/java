@@ -20,5 +20,6 @@ class lowlevel extends middlelevel{
     public static void main(String[] args)
     {
         lowlevel l=new lowlevel();
+        System.out.println(l);
     }
 }
