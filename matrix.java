@@ -5,14 +5,14 @@ public class matrix {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = 0;
-
+        Boolean condition=true;
         int arr1[][] = new int[100][100];
         int arr2[][] = new int[100][100];
         int arr3[][] = new int[100][100];
         int arr4[][] = new int[100][100];
 
         
-
+        while (condition) {
         System.out.print("Matrix Operations: \n1.Addition\n2.Substraction\n3.Multiplication\n4.Transpose\n5.Exit\nEnter Operation: ");
         int choice = sc.nextInt();
         switch (choice) {
@@ -26,17 +26,19 @@ public class matrix {
                 int b = sc.nextInt();
                 if (a == b) {
                     System.out.print("Enter the values of first matrix: ");
+                    System.out.println();
                     for (int k = 0; k < a; k++) {
                         for (int j = 0; j < b; j++) {
-                            System.out.print("\nEnter the value (" + k + "," + j + ") :");
+                            System.out.print("Enter the value (" + k + "," + j + ") :");
                             num = sc.nextInt();
                             arr1[k][j] = num;
                         }
                     }
                     System.out.print("Enter the values of second matrix: ");
+                    System.out.println();
                     for (int k = 0; k < a; k++) {
                         for (int j = 0; j < b; j++) {
-                            System.out.print("\nEnter the value (" + k + "," + j + ") :");
+                            System.out.print("Enter the value (" + k + "," + j + ") :");
                             num = sc.nextInt();
                             arr2[k][j] = num;
                         }
@@ -71,17 +73,19 @@ public class matrix {
                 int b2 = sc.nextInt();
                 if (a2 == b2) {
                     System.out.print("Enter the values of first matrix: ");
+                    System.out.println();
                     for (int k = 0; k < a2; k++) {
                         for (int j = 0; j < b2; j++) {
-                            System.out.print("\nEnter the value (" + k + "," + j + ") :");
+                            System.out.print("Enter the value (" + k + "," + j + ") :");
                             num = sc.nextInt();
                             arr1[k][j] = num;
                         }
                     }
                     System.out.print("Enter the values of second matrix: ");
+                    System.out.println();
                     for (int k = 0; k < a2; k++) {
                         for (int j = 0; j < b2; j++) {
-                            System.out.print("\nEnter the value (" + k + "," + j + ") :");
+                            System.out.print("Enter the value (" + k + "," + j + ") :");
                             num = sc.nextInt();
                             arr2[k][j] = num;
                         }
@@ -121,32 +125,34 @@ public class matrix {
             int bb2 = sc.nextInt();
             if (aa1 == bb2){
                     System.out.print("Enter the values of first matrix: ");
+                    System.out.println();
                     for (int k = 0; k < aa1; k++) {
                         for (int j = 0; j < bb1; j++) {
-                            System.out.print("\nEnter the value (" + k + "," + j + ") :");
+                            System.out.print("Enter the value (" + k + "," + j + ") :");
                             num = sc.nextInt();
                             arr1[k][j] = num;
                         }
                     }
                     System.out.print("Enter the values of second matrix: ");
-                    for (int k = 0; k < a3; k++) {
-                        for (int j = 0; j < b3; j++) {
-                            System.out.print("\nEnter the value (" + k + "," + j + ") :");
+                    System.out.println();
+                    for (int k = 0; k < aa2; k++) {
+                        for (int j = 0; j < bb2; j++) {
+                            System.out.print("Enter the value (" + k + "," + j + ") :");
                             num = sc.nextInt();
                             arr2[k][j] = num;
                         }
                     }
                     System.out.println("Multiplication of Matrix");
-                    for (int i = 0; i < a3; i++) {
-                        for (int j = 0; j < b3; j++) {
-                            for (int k = 0; k < a3; k++) {
+                    for (int i = 0; i < aa1; i++) {
+                        for (int j = 0; j < bb1; j++) {
+                            for (int k = 0; k < aa2; k++) {
                                 arr4[i][j] += arr1[i][k] * arr2[k][j];
                             }
     
                         }
                     }
-                    for (int k = 0; k < a3; k++) {
-                        for (int j = 0; j < b3; j++) {
+                    for (int k = 0; k < aa1; k++) {
+                        for (int j = 0; j < bb2; j++) {
                             System.out.print(arr4[k][j] + " ");
                         }
                         System.out.println();
@@ -167,48 +173,32 @@ public class matrix {
                 int a4 = sc.nextInt();
                 System.out.print("Enter the size of column: ");
                 int b4 = sc.nextInt();
-                System.out.print("Enter the values of first matrix: ");
+                System.out.println();
                 for (int k = 0; k < a4; k++) {
                     for (int j = 0; j < b4; j++) {
-                        System.out.print("\nEnter the value (" + k + "," + j + ") :");
+                        System.out.print("Enter the value (" + k + "," + j + ") :");
                         num = sc.nextInt();
                         arr1[k][j] = num;
                     }
                 }
-                System.out.print("Enter the values of second matrix: ");
-                for (int k = 0; k < a4; k++) {
-                    for (int j = 0; j < b4; j++) {
-                        System.out.print("\nEnter the value (" + k + "," + j + ") :");
-                        num = sc.nextInt();
-                        arr2[k][j] = num;
-                    }
-                }
-                System.out.println("Transpose of Matrix 1");
-                for (int i = 0; i < a4; i++) {
-                    for (int j = 0; j < b4; j++) {
+                
+                System.out.println("Transpose of Matrix");
+                for (int i = 0; i <= a4; i++) {
+                    for (int j = 0; j <= b4; j++) {
                         arr3[i][j] = arr1[j][i];
                     }
                 }
-                for (int k = 0; k < a4; k++) {
-                    for (int j = 0; j < b4; j++) {
-                        System.out.print(arr3[k][j] + " ");
-                    }
-                    System.out.println();
-                }
-                System.out.println("Transpose of Matrix 2");
-                for (int i = 0; i < a4; i++) {
-                    for (int j = 0; j < b4; j++) {
-                        arr3[i][j] = arr2[j][i];
-                    }
-                }
-                for (int k = 0; k < a4; k++) {
-                    for (int j = 0; j < b4; j++) {
+                for (int k = 0; k < b4; k++) {
+                    for (int j = 0; j < a4; j++) {
                         System.out.print(arr3[k][j] + " ");
                     }
                     System.out.println();
                 }
                 break;
+                case 5:
+                condition=false;
+                    break;
         }
-        sc.close();
+        }
     }
 }
