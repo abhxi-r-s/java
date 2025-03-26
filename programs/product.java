@@ -1,5 +1,3 @@
-import programs.person;
-
 public class product {
 
     int pro_code;
