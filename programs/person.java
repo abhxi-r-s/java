@@ -1,5 +1,3 @@
-package programs;
-
 public class person {
     
     int age;
