@@ -15,7 +15,7 @@ public class FileWriteRead {
 
         } catch (IOException e) {
             System.out.println("An error occurred while writing to the file.");
-            e.printStackTrace();
+            // e.printStackTrace();
         }
 
         // Read from file
@@ -34,7 +34,7 @@ public class FileWriteRead {
         } catch (IOException e) {
             
             System.out.println("An error occurred while reading from the file.");
-            e.printStackTrace();
+            // e.printStackTrace();
         }
     }
 }
